@@ -13,3 +13,5 @@ VALUES
 	('Kevin', 22, 1),
 	('Bob', 15, 2),
 	('Steward', NULL, 3);
+
+GO
