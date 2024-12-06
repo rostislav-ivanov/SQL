@@ -6,11 +6,11 @@ CREATE OR ALTER FUNCTION ufn_CalculateFutureValue
 )
 RETURNS DECIMAL(18,4)
 BEGIN
-	DECLARE @futureValue DECIMAL(18,4) = @sum * POWER((1 + @rate / 100), @years);
+	DECLARE @futureValue DECIMAL(18,4) = @sum * POWER((1 + @rate), @years);
 	RETURN  @futureValue;
 END;
 
 GO
 
 
-SELECT dbo.ufn_CalculateFutureValue(1000, 10, 5);
+SELECT dbo.ufn_CalculateFutureValue(1000, 0.1, 5);
